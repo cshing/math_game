@@ -17,13 +17,13 @@ def askQuestions
     if @count != 1
         puts '----- NEW TURN -----'
     end
-    
+
     question = Questions.new
     puts "Player 1: #{question.display}"
     print '> '
-    answer = gets.chomp.to_i
+    response = gets.chomp.to_i
 
-    if answer == question.answer
+    if response == question.answer
       puts 'Player 1: YES! You are correct.'
       puts "P1: #{@player1.lives}/3 vs P2: #{@player2.lives}/3"    
     else 
@@ -38,9 +38,9 @@ def askQuestions
     question = Questions.new
     puts "Player 2: #{question.display}"
     print '> '
-    answer = gets.chomp.to_i
+    response = gets.chomp.to_i
 
-    if answer == question.answer
+    if response == question.answer
       puts 'Player 2: YES! You are correct.'
       puts "P1: #{@player1.lives}/3 vs P2: #{@player2.lives}/3"
     else 
